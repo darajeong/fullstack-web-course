@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 관리 - 카드 구조</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>회원 관리</h1>
+        <p>회원 목록을 확인하고 새로운 회원을 등록하세요.</p>
+        <a class="button-link" href="#member-form">회원 등록으로 이동</a>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>회원 목록</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">이메일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td>hong@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>김철수</td>
+                        <td>kim@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>회원 등록</h2>
+
+            <form id="member-form">
+                <label for="member-name">이름</label>
+                <input
+                    type="text"
+                    id="member-name"
+                    name="name"
+                    placeholder="이름을 입력하세요"
+                    required
+                >
+
+                <label for="member-email">이메일</label>
+                <input
+                    type="email"
+                    id="member-email"
+                    name="email"
+                    placeholder="이메일을 입력하세요"
+                    required
+                >
+
+                <button type="submit">회원 등록</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
