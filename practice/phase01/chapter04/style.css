@@ -1,0 +1,53 @@
+/* 페이지 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    color: #334155;
+    background-color: #f8fafc;
+}
+
+/* 상단 영역 */
+header {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+}
+
+/* 회원 목록과 회원 등록의 공통 스타일 */
+.member-card {
+    background-color: white;
+}
+
+/* 제목 스타일 */
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    color: #0f766e;
+}
+
+/* 회원 등록 폼 */
+#signup-form {
+    background-color: #ecfeff;
+}
+
+/* 등록 버튼 */
+.primary-button {
+    background-color: #0f766e;
+    color: white;
+}
+
+/* 우선순위 실험: 태그 선택자 */
+p {
+    color: blue;
+}
+
+/* 우선순위 실험: 클래스 선택자 */
+.notice {
+    color: green;
+}
+
+/* 우선순위 실험: 아이디 선택자 */
+#important-message {
+    color: red;
+}
