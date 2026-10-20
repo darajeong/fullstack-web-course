@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+}
+
+/* Header: 제목과 메뉴를 양 끝에 배치 */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    background-color: #eff6ff;
+    border-bottom: 2px solid #2563eb;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* 메뉴: 가로 배치와 간격 */
+.main-nav {
+    display: flex;
+    gap: 16px;
+}
+
+.main-nav a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* 본문 안쪽 여백 */
+main {
+    padding: 20px;
+}
+
+/* Toolbar: 검색창과 버튼을 가로로 배치 */
+.toolbar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.toolbar input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.toolbar button {
+    padding: 10px 16px;
+
+    border: 1px solid #2563eb;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* 회원 목록: 같은 비율의 3열로 배치 */
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* 회원 카드 모양 */
+.member-card {
+    padding: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: white;
+}
+
+
+/* 카드 안의 상세·수정 버튼을 가로로 배치 */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
