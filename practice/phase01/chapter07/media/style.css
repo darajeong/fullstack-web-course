@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background-color: #f3f4f6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 24px auto;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.screen-status {
+    padding: 16px;
+    border: 1px solid #9ca3af;
+    background-color: white;
+    font-weight: bold;
+}
+
+/* 기본 상태에서는 넓은 화면용 안내 표시 */
+.narrow-label {
+    display: none;
+}
+
+/* 기본 배치: 같은 비율의 2열 */
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.member-card {
+    padding: 24px;
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    background-color: #eff6ff;
+}
+
+.member-card h2 {
+    margin-top: 0;
+}
+
+/* 화면 너비가 768px 이하이면 적용 */
+@media (max-width: 768px) {
+    /* 카드를 1열로 변경 */
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 조건 적용 여부를 색으로도 확인 */
+    .member-card {
+        border-color: #15803d;
+        background-color: #dcfce7;
+    }
+
+    /* 작은 화면용 안내로 변경 */
+    .wide-label {
+        display: none;
+    }
+
+    .narrow-label {
+        display: inline;
+    }
+}

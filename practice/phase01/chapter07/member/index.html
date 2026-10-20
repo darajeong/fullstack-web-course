@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 회원관리 페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Member Management</h1>
+
+        <nav class="main-nav">
+            <a href="#">Home</a>
+            <a href="#members">Members</a>
+            <a href="#register">Add Member</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="toolbar">
+            <input
+                type="search"
+                placeholder="회원 이름 검색"
+                aria-label="회원 이름 검색"
+            >
+            <button type="button">검색</button>
+            <button type="button">회원 추가</button>
+        </div>
+
+        <section id="members">
+            <h2>회원 목록</h2>
+
+            <div class="member-grid">
+                <article class="member-card">
+                    <h3>홍길동</h3>
+                    <p>hong@example.com</p>
+                    <p>Frontend Basic</p>
+
+                    <div class="card-actions">
+                        <button type="button">상세</button>
+                        <button type="button">수정</button>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <h3>김영희</h3>
+                    <p>kim@example.com</p>
+                    <p>Frontend Basic</p>
+
+                    <div class="card-actions">
+                        <button type="button">상세</button>
+                        <button type="button">수정</button>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <h3>이철수</h3>
+                    <p>lee@example.com</p>
+                    <p>Frontend Basic</p>
+
+                    <div class="card-actions">
+                        <button type="button">상세</button>
+                        <button type="button">수정</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

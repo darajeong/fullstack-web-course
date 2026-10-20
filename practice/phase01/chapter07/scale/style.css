@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+/* rem의 기준이 되는 글자 크기 */
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 부모 영역: 화면에 맞춰 늘어나되 최대 너비 제한 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f3f4f6;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.box {
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 2px solid #2563eb;
+    background-color: #eff6ff;
+    overflow-wrap: anywhere;
+}
+
+.fixed {
+    width: 200px;
+}
+
+.percent {
+    width: 50%;
+}
+
+.root {
+    width: 10rem;
+}
+
+.viewport-width {
+    width: 50vw;
+}
+
+.viewport-height {
+    height: 20vh;
+}
