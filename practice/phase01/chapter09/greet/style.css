@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    color: #2557b7;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 28px;
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 28px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* 入力창과 버튼을 한 줄로 배치 */
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* 이름과 나이 입력창 */
+input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2557b7;
+    box-shadow: 0 0 0 3px rgba(37, 87, 183, 0.15);
+}
+
+/* 확인 버튼 */
+input[type="button"] {
+    padding: 10px 18px;
+    background-color: #2557b7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+input[type="button"]:hover {
+    background-color: #004085;
+}
+
+/* 인사말 */
+#greeting-box {
+    font-weight: bold;
+}
+
+/* 회원 목록 */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e9e9ef;
+    margin-bottom: 8px;
+    padding: 14px 12px;
+    border-radius: 4px;
+}
+
+/* 작은 화면에서 여백과 제목 크기 조정 */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
