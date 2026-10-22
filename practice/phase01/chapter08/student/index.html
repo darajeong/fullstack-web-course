@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산 계산기</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="calculator">
+        <h1>사칙연산 계산기</h1>
+        <p>숫자 두 개를 입력하고 연산자를 선택하세요.</p>
+
+        <form id="calculator-form" novalidate>
+            <label for="first-number">첫 번째 숫자</label>
+            <input
+                type="text"
+                id="first-number"
+                placeholder="예: 10"
+            >
+
+            <label for="operator">연산자</label>
+            <select id="operator">
+                <option value="+">+ 더하기</option>
+                <option value="-">- 빼기</option>
+                <option value="*">* 곱하기</option>
+                <option value="/">/ 나누기</option>
+            </select>
+
+            <label for="second-number">두 번째 숫자</label>
+            <input
+                type="text"
+                id="second-number"
+                placeholder="예: 3"
+            >
+
+            <button type="submit">계산</button>
+        </form>
+    </main>
+</body>
+</html>
