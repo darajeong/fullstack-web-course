@@ -1,0 +1,270 @@
+/* 전체 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "맑은 고딕", Arial, sans-serif;
+  color: #302d42;
+  background-color: #f5f4fa;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+}
+
+header,
+main {
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 페이지 제목 */
+header {
+  padding: 48px 0 28px;
+}
+
+h1 {
+  margin: 0;
+  color: #46357c;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+/* 전체 영역 배치 */
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+/* 공통 패널 */
+section {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid #e8e4f1;
+  border-radius: 18px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 24px rgb(57 40 100 / 4%);
+}
+
+h2 {
+  margin: 0 0 22px;
+  color: #39304f;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* 검색 영역 */
+section:first-child {
+  grid-column: 1 / -1;
+  border-top: 4px solid #8064c5;
+}
+
+/* 등록 영역 */
+section:last-child {
+  grid-column: 1 / -1;
+}
+
+/* 입력 폼 */
+form,
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  gap: 16px;
+}
+
+form > div {
+  gap: 8px;
+}
+
+label {
+  color: #625a74;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 1px solid #ddd7e9;
+  border-radius: 10px;
+  background-color: #faf9fd;
+  color: #302d42;
+}
+
+input::placeholder {
+  color: #8a8399;
+}
+
+input:focus {
+  border-color: #8064c5;
+  background-color: #ffffff;
+}
+
+/* 기본 버튼 */
+button {
+  padding: 12px 24px;
+  border: 1px solid #7052b3;
+  border-radius: 10px;
+  background-color: #7052b3;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form > button {
+  align-self: flex-start;
+  min-width: 110px;
+  margin-top: 4px;
+  box-shadow: 0 4px 10px rgb(112 82 179 / 15%);
+}
+
+button:hover {
+  border-color: #5b3f99;
+  background-color: #5b3f99;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* 키보드로 선택한 위치 표시 */
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #bca8eb;
+  outline-offset: 3px;
+}
+
+/* 검색 상태 안내 */
+#status-message {
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background-color: #f3effa;
+  color: #655285;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* 도서 목록 */
+#book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#book-list:empty::before {
+  content: "검색한 도서가 여기에 표시됩니다.";
+  display: block;
+  padding: 32px 16px;
+  border: 1px dashed #ddd7e9;
+  border-radius: 12px;
+  color: #746c83;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 도서 한 권을 가로로 긴 카드로 표시 */
+#book-list button {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid #e7e1ef;
+  border-radius: 12px;
+  background-color: #faf9fd;
+  color: #433954;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  overflow-wrap: anywhere;
+  box-shadow: none;
+}
+
+#book-list button:hover {
+  border-color: #a28acb;
+  background-color: #f0eaf9;
+}
+
+/* 도서 상세 */
+#book-detail {
+  min-height: 130px;
+  padding: 20px;
+  border: 1px solid #eee9f5;
+  border-radius: 12px;
+  background-color: #faf9fd;
+  color: #655c75;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+#book-detail h3 {
+  margin: 0 0 16px;
+  color: #46357c;
+  font-size: 18px;
+}
+
+#book-detail p {
+  margin: 0 0 12px;
+}
+
+#book-detail p:last-child {
+  margin-bottom: 0;
+}
+
+/* 등록 결과 안내 */
+#form-message {
+  margin: 16px 0 0;
+  color: #655285;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+#form-message:empty {
+  margin: 0;
+}
+
+/* 모바일에서는 모든 패널을 한 열로 배치 */
+@media (max-width: 700px) {
+  header,
+  main {
+    width: calc(100% - 28px);
+  }
+
+  header {
+    padding: 32px 0 22px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-bottom: 32px;
+  }
+
+  section {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  form > button {
+    width: 100%;
+  }
+}
